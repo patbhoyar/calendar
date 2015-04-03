@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<h2 class="align-center">Calendar View</h2>
+<div class="col-md-12">
+    <div class="col-md-12 background-azure border-top-left-radius-10 border-top-right-radius-10">
+        <h2 class="align-center margin-tb-10">{{ currentMonth }}, {{ currentYear }}</h2>
+    </div>
+    <div class="border-azure clear overflowHidden">
+        <div class="row">
+            <div class="DoW align-center" ng-repeat="(key, value) in daysOfWeek">{{value}}</div>
+        </div>
+        <div class="row">
+            <div class="dateBlock align-center" ng-repeat="i in getNumber(number) track by $index">
+                {{$index}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,8 +8,8 @@ myApp
                 controller: 'HomeController'
             })
             .when('/calendar', {
-                templateUrl:'calendarView.html',
-                controller: 'calendarController'
+                templateUrl:'pages/calendarView.html',
+                controller: 'CalendarController'
             })
             .when('/add', {
                 templateUrl: 'edit.html',

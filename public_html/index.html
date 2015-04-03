@@ -1,15 +1,46 @@
 <html ng-app="calendarApp">
-<title>Calendar Application</title>
+    <head>
+        <title>My Calendar</title>
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/normailize.css" rel="stylesheet">
+    </head>
+
 <body>
-<div ng-controller="CalendarController">
-    <div ng-view=""></div>
-</div>
+    <div class="container" ng-controller="MainController">
+        <nav class="navbar navbar-default margin-top-10">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    My Calendar <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#/calendar">Calendar</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </nav>
+        <div ng-view=""></div>
+    </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/services/populateDates.js"></script>
+<script src="js/services/monthsAndDays.js"></script>
 <script src="js/controllers/CalendarController.js"></script>
+<script src="js/controllers/MainController.js"></script>
 <script src="js/controllers/homeController.js"></script>
 
 </body>
