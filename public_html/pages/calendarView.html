@@ -1,15 +1,26 @@
 <h2 class="align-center">Calendar View</h2>
 <div class="col-md-12">
-    <div class="col-md-12 background-azure border-top-left-radius-10 border-top-right-radius-10">
-        <h2 class="align-center margin-tb-10">{{ currentMonth }}, {{ currentYear }}</h2>
+    <div class="col-md-12 monthBackground color-white border-top-left-radius-10 border-top-right-radius-10">
+        <button type="button" class="btn btn-default btn-lg prevNextMonth floatLeft col-md-1 margin-top-7" ng-click="changeMonth('prev')">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </button>
+        <h2 class="align-center margin-tb-10 monthDisplay col-md-4 col-md-offset-3">{{ currentMonth }}, {{ currentYear }}</h2>
+        <button type="button" class="btn btn-default btn-lg prevNextMonth floatRight col-md-1 margin-top-7" ng-click="changeMonth('next')">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </button>
     </div>
     <div class="border-azure clear overflowHidden">
         <div class="row">
             <div class="DoW align-center" ng-repeat="(key, value) in daysOfWeek">{{value}}</div>
         </div>
         <div class="row">
-            <div class="dateBlock align-center" ng-repeat="i in getNumber(number) track by $index">
-                {{$index}}
+            <div ng-repeat="i in getNumber(number) track by $index">
+                <div class="dateBlock align-center" ng-dblclick="dblClk(i)" ng-if="isToday !== i">
+                    <span class="dateHolder">{{i}}</span>
+                </div>
+                <div class="dateBlock align-center todaysDate" ng-dblclick="dblClk(i)" ng-if="isToday === i">
+                    <span class="dateHolder">{{i}}</span>
+                </div>
             </div>
         </div>
     </div>

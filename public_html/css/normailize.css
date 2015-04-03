@@ -1,14 +1,17 @@
 .clear{clear: both;}
 .overflowHidden{overflow: hidden;}
 
-.margin-tb-10{margin: 10px 0;}
+.floatLeft{float: left;}
+.floatRight{float: right;}
+
+.margin-tb-10{margin-top: 10px;margin-bottom: 10px;}
+.margin-top-7{margin-top: 7px;}
 .margin-top-10{margin-top: 10px;}
 
 .align-center{text-align: center;}
-
-.background-azure{background: rgb(161, 186, 252);}
 
 .border-top-left-radius-10{border-top-left-radius: 10px;}
 .border-top-right-radius-10{border-top-right-radius: 10px;}
 
 .border-azure{border: 1px solid rgb(161, 186, 252);}
+.color-white{color: white;}

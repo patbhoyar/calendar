@@ -1,17 +1,25 @@
-myApp.factory('dateFactory', function(){
+myApp.service('dateFactory', function(){
      
-    var dateFactory = {};
-    
-    dateFactory.getMonthInfo = function(){
+    this.getMonthInfo = function(month, year){
         var temp = new Date();
-        var d = new Date(temp.getFullYear(), temp.getMonth()+1, 0);
+        var theMonth = (month === 'NA')?temp.getMonth()+1:month+1;
+        var theYear = (year === 'NA')?temp.getFullYear():year;
+        var d = new Date(theYear, theMonth, 0);
+        var isToday = 0;
+                
+        if(temp.getMonth() === d.getMonth() && temp.getFullYear() === d.getFullYear()){
+            isToday = temp.getDate();
+        }   
+                
         var info = {
             month: d.getMonth(),
             daysInMonth: d.getDate(),
             year: d.getFullYear(),
-            dayOnFirst: new Date(d.getFullYear(), d.getMonth(), 1).getDay()
+            dayOnFirst: new Date(d.getFullYear(), d.getMonth(), 1).getDay(),
+            isCurrentMonth: (temp.getMonth() === d.getMonth() )?1:0,
+            currentDate: temp.getDate(),
+            isToday: isToday
         };
         return info;
     };
-    return dateFactory;
 });
