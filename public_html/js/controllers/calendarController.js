@@ -1,6 +1,6 @@
 myApp
 .controller('CalendarController',['$scope', 'dateFactory', 'monthsAndDays', '$timeout', function($scope, dateFactory, monthsAndDays, $timeout){
-
+    
     $scope.daysOfWeek = monthsAndDays.days;
     
     $scope.reinitializeData = function(newMonth, newYear){
@@ -66,7 +66,8 @@ myApp
     }
     
     $scope.dblClk = function(date){
-        console.log(date, $scope.monthInfo.month, $scope.currentYear);
+        $scope.modalSelectedDate = date + " " + monthsAndDays.months[$scope.monthInfo.month] + ", " + $scope.currentYear;
+        $('#myModal').modal();
     }
     
 }]);

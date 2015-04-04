@@ -34,3 +34,8 @@
 }
 
 .todaysDate{background: rgb(208, 221, 249);}
+
+.noCalendars{
+    height: 300px;
+    line-height: 300px;
+}

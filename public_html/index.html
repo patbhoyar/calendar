@@ -2,10 +2,11 @@
     <head>
         <title>My Calendar</title>
         <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap/bootstrap-colorpicker.css" rel="stylesheet">
+        <link href="css/bootstrap/colorpicker-docs.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/normailize.css" rel="stylesheet">
     </head>
-
 <body>
     <div class="container" ng-controller="MainController">
         <nav class="navbar navbar-default margin-top-10">
@@ -22,9 +23,9 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#/calendar">Calendar</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li class="active" make-active><a href="#">Home</a></li>
+                  <li make-active><a href="#/calendar">Calendar</a></li>
+                  <li make-active><a href="#/myCalendars">My Calendars</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
@@ -36,12 +37,16 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+<script src="js/lib/bootstrap/bootstrap-colorpicker.js"></script>
+<script src="js/lib/bootstrap/colorpicker-docs.js"></script>
 <script src="js/main.js"></script>
 <script src="js/services/populateDates.js"></script>
 <script src="js/services/monthsAndDays.js"></script>
 <script src="js/controllers/CalendarController.js"></script>
 <script src="js/controllers/MainController.js"></script>
 <script src="js/controllers/homeController.js"></script>
+<script src="js/controllers/MyCalendarsController.js"></script>
+<script src="js/directives/directives.js"></script>
 
 </body>
 </html>

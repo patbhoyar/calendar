@@ -11,9 +11,9 @@ myApp
                 templateUrl:'pages/calendarView.html',
                 controller: 'CalendarController'
             })
-            .when('/add', {
-                templateUrl: 'edit.html',
-                controller: 'AddController'
+            .when('/myCalendars', {
+                templateUrl: 'pages/myCalendarsView.html',
+                controller: 'MyCalendarsController'
             })
             .when('/delete/:index', {
                 templateUrl:'edit.html',
