@@ -18,6 +18,7 @@ myApp.directive('calIcon', function() {
             elem.bind('click', function() {
                 $(elem).parent().find('.btn-primary').removeClass('btn-primary').addClass('btn-default');
                 elem.removeClass('btn-default').addClass('btn-primary');
+                scope.calendarIcon = attrs.icon;
             });
         }
     };

@@ -1,4 +1,4 @@
-var myApp = angular.module('calendarApp', ['ngRoute']);
+var myApp = angular.module('calendarApp', ['ngRoute', 'firebase']);
 
 myApp
     .config(['$routeProvider', function($rp){
