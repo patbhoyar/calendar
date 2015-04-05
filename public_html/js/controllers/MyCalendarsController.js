@@ -2,9 +2,6 @@ myApp.controller('MyCalendarsController', function($scope, firebaseService){
     $(document).find('.cp').colorpicker();
     $scope.calendarColor = '#000';
     
-    $scope.myCalendars = firebaseService.getAllCalendars();
-    
-    
    $scope.saveNewCalendar = function(){
        var x = {
             'name'  :   $scope.calendarName,

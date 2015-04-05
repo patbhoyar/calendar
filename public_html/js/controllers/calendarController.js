@@ -70,4 +70,8 @@ myApp
         $('#myModal').modal();
     }
     
+    $scope.addEvent = function(){
+        
+    }
+    
 }]);

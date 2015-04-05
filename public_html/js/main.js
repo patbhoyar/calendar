@@ -19,4 +19,25 @@ myApp
                 templateUrl:'edit.html',
                 controller: 'DeleteController'
             })
+    }])
+    .run(['$rootScope','$location', '$routeParams', 'firebaseService', function($rootScope, $location, $routeParams, firebaseService) {
+        $rootScope.$on('$routeChangeSuccess', function(e, current, pre) {
+            //console.log('Current route name: ' + $location.path());
+            //console.log($routeParams);
+          
+            $rootScope.myCalendars = firebaseService.getAllCalendars();
+          
+            $('.active').removeClass('active');
+            switch($location.path()){
+                case '/':
+                    $('.menuHome').addClass('active');
+                    break;
+                case '/calendar':
+                    $('.menuCalendar').addClass('active');
+                    break;
+                case '/myCalendars':
+                    $('.menuMyCalendar').addClass('active');
+                    break;
+            }
+        });
     }]);

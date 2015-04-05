@@ -39,3 +39,8 @@
     height: 300px;
     line-height: 300px;
 }
+
+.selectCalendar{
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}

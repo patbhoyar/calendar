@@ -9,10 +9,15 @@
 .margin-tb-10{margin-top: 10px;margin-bottom: 10px;}
 .margin-top-7{margin-top: 7px;}
 .margin-top-10{margin-top: 10px;}
-
+.margin-bottom-10{margin-bottom: 10px;}
 .margin-20{margin: 20px;}
 
+.padding-0{padding: 0px;}
+.padding-5{ padding: 5px;}
+
+
 .align-center{text-align: center;}
+.align-left{text-align: left;}
 
 .border-top-left-radius-10{border-top-left-radius: 10px;}
 .border-top-right-radius-10{border-top-right-radius: 10px;}
@@ -23,3 +28,5 @@
 .color-gray{color: #ccc;}
 
 .font-size-21{font-size: 21px;}
+
+.cursor-pointer{cursor: pointer;}
